@@ -1,0 +1,17 @@
+class Solution {
+    public int maxProduct(int n) {
+        int largest = -1, secondLargest = -1;
+        while(n > 0){
+            int d = n % 10;
+            if(d > largest){
+                secondLargest = largest;
+                largest = d;
+            }
+            else if(d > secondLargest){
+                secondLargest = d;
+            }
+            n/=10;
+        }
+        return largest * secondLargest;
+    }
+}

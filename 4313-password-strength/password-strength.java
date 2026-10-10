@@ -1,6 +1,3 @@
-
-import java.util.*;
-
 class Solution {
     public int passwordStrength(String password) {
         Set<Character> set = new HashSet<>();
